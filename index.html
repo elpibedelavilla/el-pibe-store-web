@@ -14,12 +14,31 @@
       <img src="assets/el-pibe-store.png" alt="EL PIBE STORE APPS" class="brand">
       <div class="hero-copy">
         <h1>EL PIBE STORE</h1>
-        <p>Selecciona una aplicación con el mando y pulsa <strong>OK</strong> para descargar.</p>
+        <p>Selecciona con el mando y pulsa <strong>OK</strong>.</p>
       </div>
     </header>
 
-    <section class="apps-grid" id="appsGrid" aria-label="Aplicaciones"></section>
-    <footer>EL PIBE STORE · Descargas directas</footer>
+    <nav class="top-tabs" aria-label="Secciones">
+      <button class="tab-button active" data-view="apps" tabindex="0">APPS</button>
+      <button class="tab-button" data-view="offers" tabindex="0">OFERTAS</button>
+    </nav>
+
+    <section id="appsView" class="view active-view">
+      <section class="apps-grid" id="appsGrid" aria-label="Aplicaciones"></section>
+    </section>
+
+    <section id="offersView" class="view" hidden>
+      <div class="offers-head">
+        <h2>OFERTAS Y PAQUETES</h2>
+        <p>Elige la duración que prefieras. La opción con TV BOX suma 50 € al precio del servicio.</p>
+      </div>
+      <h3 class="section-title">SOLO SERVICIO</h3>
+      <section class="offers-grid" id="serviceOffers" aria-label="Ofertas solo servicio"></section>
+      <h3 class="section-title tv-title"><span class="tv-icon">▣</span> SERVICIO + TV BOX <small>+50 €</small></h3>
+      <section class="offers-grid" id="tvOffers" aria-label="Ofertas con TV Box"></section>
+    </section>
+
+    <footer>EL PIBE STORE · Apps y ofertas</footer>
   </main>
   <script src="app.js"></script>
 </body>
