@@ -3,3 +3,14 @@
 
 /* V3: navegación APPS / OFERTAS */
 .top-tabs{display:flex;justify-content:center;gap:16px;margin:-2px 0 16px}.tab-button{min-width:190px;padding:12px 30px;border:2px solid rgba(25,216,255,.42);border-radius:999px;background:rgba(6,19,35,.88);color:#aeefff;font-size:20px;font-weight:900;letter-spacing:.08em;cursor:pointer;outline:none;transition:.12s ease}.tab-button.active{background:linear-gradient(135deg,#0a4f78,#087d9e);color:#fff;border-color:#5de9ff}.tab-button:focus{transform:scale(1.06);border-color:#fff;box-shadow:0 0 0 4px var(--cyan),0 0 26px rgba(25,216,255,.72)}.view[hidden]{display:none!important}.offers-head{text-align:center;margin:0 auto 14px;max-width:1000px}.offers-head h2{margin:0 0 5px;font-size:clamp(26px,2.5vw,42px);letter-spacing:.05em}.offers-head p{margin:0;color:var(--muted);font-size:clamp(14px,1.15vw,19px)}.section-title{margin:15px 0 9px;padding-left:10px;border-left:5px solid var(--cyan);font-size:21px;letter-spacing:.05em}.section-title small{color:#7eeaff;font-size:14px}.tv-title{margin-top:20px}.tv-icon{display:inline-grid;place-items:center;width:25px;height:19px;border:2px solid #7eeaff;border-radius:4px;color:transparent;position:relative;vertical-align:1px;margin-right:5px}.tv-icon:after{content:"";position:absolute;width:8px;height:2px;background:#7eeaff;bottom:-6px;left:7px}.offers-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.offer-card{border:2px solid rgba(92,132,184,.4);border-radius:16px;background:linear-gradient(145deg,rgba(17,35,61,.97),rgba(7,10,17,.98));box-shadow:0 8px 24px rgba(0,0,0,.3);overflow:hidden}.offer-name{padding:12px 14px;background:linear-gradient(90deg,rgba(0,157,204,.25),rgba(0,0,0,.05));font-size:22px;font-weight:900;letter-spacing:.04em;border-bottom:1px solid rgba(126,234,255,.2)}.tv-badge{float:right;font-size:11px;color:#07111e;background:#7eeaff;border-radius:999px;padding:5px 8px;margin-top:0}.price-row{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,.07);font-size:15px;color:#c9d6e9}.price-row:last-child{border-bottom:0}.price-row strong{font-size:24px;color:#fff;text-shadow:0 0 12px rgba(25,216,255,.35)}@media(max-width:1250px){.offers-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.top-tabs{margin-top:2px}.tab-button{padding:10px 26px;font-size:18px}}@media(max-width:850px){.offers-grid{grid-template-columns:1fr}.top-tabs{gap:10px}.tab-button{min-width:135px}}
+
+
+/* +50 € más visible */
+.box-extra,
+.tvbox-extra,
+.extra-price {
+    font-size: 28px !important;
+    font-weight: 900 !important;
+    color: #19d8ff !important;
+    margin-left: 8px !important;
+}
