@@ -1,0 +1,72 @@
+SE TRABAJA CON GITHUB
+pibe store
+
+
+
+
+short io 
+dominio
+dl.epdlv72.com
+
+
+pasos de chat gpt
+Claro. Te dejo una chuleta corta para que la guardes. Es el procedimiento para actualizar cualquiera de tus APK sin tener que modificar EL PIBE STORE.
+
+📝 CHULETA — ACTUALIZAR UNA APK EN EL PIBE STORE
+
+1. Subir la APK nueva a GitHub
+
+Entra en tu repositorio el-pibe-store → Releases → Draft a new release / Create a new release.
+
+Crea una etiqueta nueva para esa versión. Por ejemplo, si actualizas Dino:
+
+Tag: dino-v2
+Release title: Dino v2
+
+Adjunta abajo el archivo APK nuevo, por ejemplo:
+
+dinosauriotrex.apk
+
+Pulsa Publish release.
+
+Una vez publicada, en Assets, haz clic derecho sobre el archivo .apk → Copiar dirección del enlace.
+
+Te quedará un enlace parecido a:
+
+https://github.com/elpibedelavilla/el-pibe-store/releases/download/dino-v2/dinosauriotrex.apk
+
+2. Cambiar el destino en Short.io
+
+Entra en Short.io → selecciona dl.epdlv72.com → busca el enlace correspondiente, por ejemplo:
+
+https://dl.epdlv72.com/dino
+
+Pulsa el lápiz ✏️ para editar.
+
+En URL original / Original URL, borra el enlace antiguo de GitHub y pega el enlace de la APK nueva que acabas de copiar.
+
+NO cambies el nombre corto dino.
+
+Guarda los cambios.
+
+3. Comprobar
+
+Abre en el navegador:
+
+https://dl.epdlv72.com/dino
+
+Si descarga la APK nueva directamente: terminado. ✅
+
+🔑 Lo más importante
+
+La cadena queda así:
+
+EL PIBE STORE → dl.epdlv72.com/dino → Short.io → APK nueva en GitHub
+
+Por eso, cuando saques dino-v3, dino-v4, etc., EL PIBE STORE no necesita modificarse ni volver a compilarse. Solo subes la APK nueva a GitHub y cambias su destino en Short.io.
+
+Guárdate especialmente esta regla:
+
+GitHub cambia con cada versión. El enlace de Short.io NO cambia nunca.
+
+Esa es precisamente la ventaja del sistema que hemos montado.
