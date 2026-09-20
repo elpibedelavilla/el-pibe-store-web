@@ -243,11 +243,12 @@
   margin: 0 auto;
   border-radius: 10px;
 }
+
 .help-card h3 {
-  font-size: 40px;
-  text-align: center;
-  color: #00eaff;
-  font-weight: 800;
-  margin: 10px 0 18px;
-  text-shadow: 0 0 10px rgba(56, 217, 255, 0.45);
+    font-size: 36px !important;
+    text-align: center !important;
+    color: #38d9ff !important;
+    font-weight: 900 !important;
+    margin: 10px 0 20px !important;
+    text-shadow: 0 0 12px rgba(56, 217, 255, 0.65);
 }
