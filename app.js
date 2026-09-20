@@ -292,7 +292,7 @@ document.addEventListener('keydown', e => {
       e.preventDefault();
 
       const next = e.key === 'ArrowRight'
-        ? Math.min(tabIndex+1,1)
+        ? Math.min(tabIndex+1,2)
         : Math.max(tabIndex-1,0);
 
       tabs[next].focus();
