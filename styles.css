@@ -207,3 +207,39 @@
     min-height: 44px;
   }
 }
+/* =========================
+   GUIA DE AYUDAS
+   ========================= */
+
+.help-grid {
+  width: min(1100px, 94%);
+  margin: 20px auto 40px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.help-card {
+  width: 100%;
+  background: rgba(8, 29, 49, 0.95);
+  border: 1px solid rgba(70, 190, 255, 0.35);
+  border-radius: 14px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.help-card h3 {
+  margin: 0 0 15px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 22px;
+}
+
+.help-card img {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 10px;
+}
