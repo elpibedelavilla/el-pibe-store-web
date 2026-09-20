@@ -28,17 +28,145 @@ const TV_BOX_EXTRA = 50;
 const grid = document.getElementById('appsGrid');
 
 function pedirPin(app) {
-  const codigo = prompt(`Introduce el PIN de 6 dígitos para descargar ${app.name}:`);
+  let codigo = '';
 
-  if (codigo === null) return;
+  const overlay = document.createElement('div');
+  overlay.className = 'pin-overlay';
 
-  if (codigo.trim() === app.pin) {
-    window.location.href = `https://dl.epdlv72.com/${app.slug}`;
-  } else {
-    alert('PIN incorrecto. Comprueba el código e inténtalo de nuevo.');
+  overlay.innerHTML = `
+    <div class="pin-modal">
+      <button class="pin-close" type="button" aria-label="Cerrar">×</button>
+
+      <div class="pin-icon">🔐</div>
+      <h2>${app.name}</h2>
+      <p class="pin-text">Introduce el código de descarga</p>
+
+      <div class="pin-display">
+        ${[0,1,2,3,4,5].map(i =>
+          `<span class="pin-digit" data-pos="${i}"></span>`
+        ).join('')}
+      </div>
+
+      <div class="pin-message"></div>
+
+      <div class="pin-keypad">
+        ${[1,2,3,4,5,6,7,8,9].map(n =>
+          `<button type="button" class="pin-key" data-number="${n}">${n}</button>`
+        ).join('')}
+
+        <button type="button" class="pin-key pin-clear">⌫</button>
+        <button type="button" class="pin-key" data-number="0">0</button>
+        <button type="button" class="pin-key pin-ok">OK</button>
+      </div>
+
+      <button type="button" class="pin-cancel">CANCELAR</button>
+    </div>
+  `;
+
+  document.body.appendChild(overlay);
+
+  const digits = [...overlay.querySelectorAll('.pin-digit')];
+  const message = overlay.querySelector('.pin-message');
+  const numberKeys = [...overlay.querySelectorAll('[data-number]')];
+  const clearKey = overlay.querySelector('.pin-clear');
+  const okKey = overlay.querySelector('.pin-ok');
+  const cancelKey = overlay.querySelector('.pin-cancel');
+  const closeKey = overlay.querySelector('.pin-close');
+
+  function actualizarPantalla() {
+    digits.forEach((digit, i) => {
+      digit.textContent = i < codigo.length ? '●' : '';
+      digit.classList.toggle('filled', i < codigo.length);
+    });
   }
-}
 
+  function cerrar() {
+    document.removeEventListener('keydown', tecladoFisico, true);
+    overlay.remove();
+  }
+
+  function comprobar() {
+    if (codigo.length !== 6) {
+      message.textContent = 'Introduce los 6 números.';
+      return;
+    }
+
+    if (codigo === app.pin) {
+      message.textContent = '✓ Código correcto';
+      document.removeEventListener('keydown', tecladoFisico, true);
+
+      setTimeout(() => {
+        window.location.href = `https://dl.epdlv72.com/${app.slug}`;
+      }, 350);
+    } else {
+      message.textContent = 'Código incorrecto';
+      overlay.querySelector('.pin-modal').classList.add('pin-error');
+
+      setTimeout(() => {
+        overlay.querySelector('.pin-modal').classList.remove('pin-error');
+      }, 400);
+
+      codigo = '';
+      actualizarPantalla();
+    }
+  }
+
+  function agregarNumero(numero) {
+    if (codigo.length < 6) {
+      codigo += numero;
+      message.textContent = '';
+      actualizarPantalla();
+    }
+  }
+
+  function borrarNumero() {
+    codigo = codigo.slice(0, -1);
+    message.textContent = '';
+    actualizarPantalla();
+  }
+
+  function tecladoFisico(e) {
+    if (/^[0-9]$/.test(e.key)) {
+      e.preventDefault();
+      e.stopPropagation();
+      agregarNumero(e.key);
+    } else if (e.key === 'Backspace') {
+      e.preventDefault();
+      e.stopPropagation();
+      borrarNumero();
+    } else if (e.key === 'Enter') {
+      e.preventDefault();
+      e.stopPropagation();
+      comprobar();
+    } else if (e.key === 'Escape') {
+      e.preventDefault();
+      e.stopPropagation();
+      cerrar();
+    }
+  }
+
+  numberKeys.forEach(btn => {
+    btn.addEventListener('click', () => agregarNumero(btn.dataset.number));
+  });
+
+  clearKey.addEventListener('click', borrarNumero);
+  okKey.addEventListener('click', comprobar);
+  cancelKey.addEventListener('click', cerrar);
+  closeKey.addEventListener('click', cerrar);
+
+  overlay.addEventListener('click', e => {
+    if (e.target === overlay) cerrar();
+  });
+
+  document.addEventListener('keydown', tecladoFisico, true);
+
+  actualizarPantalla();
+
+  setTimeout(() => {
+    const firstKey = overlay.querySelector('.pin-key');
+    if (firstKey) firstKey.focus();
+  }, 50);
+}
 apps.forEach(app => {
   const a = document.createElement('a');
   a.className = 'app-card nav-item';
