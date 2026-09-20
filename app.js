@@ -243,15 +243,19 @@ function focusApp(i){
 function showView(view, focusContent=false){
   activeView = view;
 
-  document.getElementById('appsView').hidden = view !== 'apps';
-  document.getElementById('offersView').hidden = view !== 'offers';
 
-  document.getElementById('appsView')
-    .classList.toggle('active-view', view === 'apps');
+document.getElementById('appsView').hidden = view !== 'apps';
+document.getElementById('offersView').hidden = view !== 'offers';
+document.getElementById('helpView').hidden = view !== 'help';
 
-  document.getElementById('offersView')
-    .classList.toggle('active-view', view === 'offers');
+document.getElementById('appsView')
+  .classList.toggle('active-view', view === 'apps');
 
+document.getElementById('offersView')
+  .classList.toggle('active-view', view === 'offers');
+
+document.getElementById('helpView')
+  .classList.toggle('active-view', view === 'help');
   tabs.forEach(t =>
     t.classList.toggle('active', t.dataset.view === view)
   );
