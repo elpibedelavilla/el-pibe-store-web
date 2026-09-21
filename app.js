@@ -260,6 +260,7 @@ document.getElementById('helpView')
   .classList.toggle('active-view', view === 'help');
   document.getElementById('vpnView')
   .classList.toggle('active-view', view === 'vpn');
+ 
   tabs.forEach(t =>
     t.classList.toggle('active', t.dataset.view === view)
   );
