@@ -247,6 +247,8 @@ function showView(view, focusContent=false){
 document.getElementById('appsView').hidden = view !== 'apps';
 document.getElementById('offersView').hidden = view !== 'offers';
 document.getElementById('helpView').hidden = view !== 'help';
+document.getElementById('vpnView').hidden = view !== 'vpn';
+  
 
 document.getElementById('appsView')
   .classList.toggle('active-view', view === 'apps');
@@ -256,6 +258,8 @@ document.getElementById('offersView')
 
 document.getElementById('helpView')
   .classList.toggle('active-view', view === 'help');
+  document.getElementById('vpnView')
+  .classList.toggle('active-view', view === 'vpn');
   tabs.forEach(t =>
     t.classList.toggle('active', t.dataset.view === view)
   );
@@ -301,11 +305,19 @@ document.addEventListener('keydown', e => {
     } else if(e.key === 'ArrowDown'){
       e.preventDefault();
 
-      if(el.dataset.view === 'apps')
-        showView('apps', true);
-      else
-        document.getElementById('offersView')
-          .scrollIntoView({behavior:'smooth',block:'start'});
+   if(el.dataset.view === 'apps'){
+    showView('apps', true);
+} else {
+    showView(el.dataset.view, false);
+
+    const target = document.getElementById(el.dataset.view + 'View');
+    if(target){
+        target.scrollIntoView({
+            behavior:'smooth',
+            block:'start'
+        });
+    }
+}
 
     } else if(e.key === 'Enter' || e.key === ' '){
       e.preventDefault();
