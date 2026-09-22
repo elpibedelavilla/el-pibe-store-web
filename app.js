@@ -303,22 +303,20 @@ document.addEventListener('keydown', e => {
       tabs[next].focus();
       showView(tabs[next].dataset.view, false);
 
-    } else if(e.key === 'ArrowDown'){
-      e.preventDefault();
+} else if(e.key === 'ArrowDown'){
+  e.preventDefault();
 
-   if(el.dataset.view === 'apps'){
+  if(el.dataset.view === 'apps'){
     showView('apps', true);
-} else {
+  } else {
     showView(el.dataset.view, false);
 
-    const target = document.getElementById(el.dataset.view + 'View');
-    if(target){
-        target.scrollIntoView({
-            behavior:'smooth',
-            block:'start'
-        });
-    }
-}
+    window.scrollBy({
+      top: Math.round(window.innerHeight * 0.75),
+      left: 0,
+      behavior: 'auto'
+    });
+  }
 
     } else if(e.key === 'Enter' || e.key === ' '){
       e.preventDefault();
