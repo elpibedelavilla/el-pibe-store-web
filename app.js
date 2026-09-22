@@ -326,9 +326,26 @@ document.addEventListener('keydown', e => {
     }
 
     return;
+       
+  }
+
+  // Desplazamiento con mando en secciones que no son APPS
+  if(activeView !== 'apps' && (e.key === 'ArrowDown' || e.key === 'ArrowUp')){
+    e.preventDefault();
+
+    const desplazamiento = Math.round(window.innerHeight * 0.75);
+
+    window.scrollBy({
+      top: e.key === 'ArrowDown' ? desplazamiento : -desplazamiento,
+      left: 0,
+      behavior: 'smooth'
+    });
+
+    return;
   }
 
   if(el.classList.contains('app-card')){
+
     const c = columns();
     let next = currentApp;
 
