@@ -300,7 +300,7 @@ document.addEventListener('keydown', e => {
         ? Math.min(tabIndex+1,tabs.length-1)
         : Math.max(tabIndex-1,0);
 
-      tabs[next].focus();
+      tabs[next].focus({ preventScroll: true });
       showView(tabs[next].dataset.view, false);
 
 } else if(e.key === 'ArrowDown'){
