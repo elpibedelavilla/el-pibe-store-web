@@ -278,4 +278,17 @@
     font-size: 13px !important;
     margin: 2px 0 !important;
   }
+    .home-logo {
+    display: none !important;
+}
+
+.home-hero {
+    display: none !important;
+}
+
+.hero img {
+    max-height: 70px !important;
+    width: auto !important;
+    object-fit: contain !important;
+}
 }
