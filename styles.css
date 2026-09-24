@@ -290,5 +290,23 @@
     max-height: 70px !important;
     width: auto !important;
     object-fit: contain !important;
+    .top-tabs {
+    gap: 6px !important;
+    margin: 2px 0 6px !important;
 }
+
+.top-tabs {
+    gap: 6px !important;
+    margin: 2px 0 6px !important;
 }
+
+.tab-button {
+    min-width: 115px !important;
+    padding: 7px 12px !important;
+    font-size: 13px !important;
+}
+
+
+
+}
+
