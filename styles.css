@@ -252,3 +252,30 @@
     margin: 10px 0 20px !important;
     text-shadow: 0 0 12px rgba(56, 217, 255, 0.65);
 }
+/* =========================================
+   AJUSTE PARA TV / APP EN HORIZONTAL
+   ========================================= */
+
+@media (orientation: landscape) and (max-height: 700px) {
+
+  .hero {
+    height: 75px !important;
+    margin-bottom: 4px !important;
+    padding: 4px 0 !important;
+  }
+
+  .brand {
+    width: 110px !important;
+    height: 70px !important;
+    object-fit: contain !important;
+  }
+
+  .hero-copy h1 {
+    font-size: 22px !important;
+  }
+
+  .hero-copy p {
+    font-size: 13px !important;
+    margin: 2px 0 !important;
+  }
+}
