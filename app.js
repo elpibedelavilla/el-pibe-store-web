@@ -385,9 +385,4 @@ window.addEventListener('load', () => {
   if (barra) {
     barra.scrollLeft = 0;
   }
-
-  if (tabs.length > 0) {
-    tabs[0].focus({ preventScroll: true });
-  }
-});
 });
