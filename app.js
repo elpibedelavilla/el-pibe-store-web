@@ -379,5 +379,15 @@ document.addEventListener('keydown', e => {
 
 window.addEventListener('load', () => {
   showView('apps');
-  tabs[0].focus();
+
+  const barra = document.querySelector('.top-tabs');
+
+  if (barra) {
+    barra.scrollLeft = 0;
+  }
+
+  if (tabs.length > 0) {
+    tabs[0].focus({ preventScroll: true });
+  }
+});
 });
