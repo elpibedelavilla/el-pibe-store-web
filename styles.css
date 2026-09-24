@@ -296,8 +296,14 @@
 }
 
 .top-tabs {
-    gap: 6px !important;
+  .top-tabs {
+    gap: 3px !important;
     margin: 2px 0 6px !important;
+    justify-content: flex-start !important;
+    overflow-x: auto !important;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+}
 }
 
 .tab-button {
