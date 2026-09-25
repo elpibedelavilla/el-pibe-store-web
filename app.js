@@ -467,3 +467,41 @@ function cerrarVentanaIbericaQr() {
 
 ibericaWhatsapp.addEventListener('click', abrirIbericaQr);
 cerrarIbericaQr.addEventListener('click', cerrarVentanaIbericaQr);
+// ===== QR WHATSAPP SIGMA PRO =====
+
+const sigmaWhatsapp = document.getElementById('sigmaWhatsapp');
+const sigmaQrModal = document.getElementById('sigmaQrModal');
+const cerrarSigmaQr = document.getElementById('cerrarSigmaQr');
+const sigmaQr = document.getElementById('sigmaQr');
+
+const sigmaNumero = '34695768168';
+const sigmaMensaje = 'Hola, me interesa el servicio SIGMA PRO';
+const sigmaWhatsappUrl =
+  `https://wa.me/${sigmaNumero}?text=${encodeURIComponent(sigmaMensaje)}`;
+
+function abrirSigmaQr() {
+  sigmaQr.innerHTML = '';
+
+  new QRCode(sigmaQr, {
+    text: sigmaWhatsappUrl,
+    width: 240,
+    height: 240
+  });
+
+  sigmaQrModal.hidden = false;
+
+  setTimeout(() => {
+    cerrarSigmaQr.focus({ preventScroll: true });
+  }, 0);
+}
+
+function cerrarVentanaSigmaQr() {
+  sigmaQrModal.hidden = true;
+
+  setTimeout(() => {
+    sigmaWhatsapp.focus({ preventScroll: true });
+  }, 0);
+}
+
+sigmaWhatsapp.addEventListener('click', abrirSigmaQr);
+cerrarSigmaQr.addEventListener('click', cerrarVentanaSigmaQr);
