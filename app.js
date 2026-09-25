@@ -445,6 +445,7 @@ const ibericaWhatsappUrl =
   `https://wa.me/${ibericaNumero}?text=${encodeURIComponent(ibericaMensaje)}`;
 
 function abrirIbericaQr() {
+  sigmaQrModal.hidden = true;
   ibericaQr.innerHTML = '';
 
   new QRCode(ibericaQr, {
@@ -483,6 +484,7 @@ const sigmaWhatsappUrl =
   `https://wa.me/${sigmaNumero}?text=${encodeURIComponent(sigmaMensaje)}`;
 
 function abrirSigmaQr() {
+  ibericaQrModal.hidden = true;
   sigmaQr.innerHTML = '';
 
   new QRCode(sigmaQr, {
