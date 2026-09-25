@@ -246,6 +246,8 @@ function showView(view, focusContent=false){
 
 document.getElementById('appsView').hidden = view !== 'apps';
   document.getElementById('ibericaView').hidden = view !== 'iberica';
+  document.getElementById('sigmaView').hidden = view !== 'sigma';
+ 
 document.getElementById('offersView').hidden = view !== 'offers';
 
 document.getElementById('helpView').hidden = view !== 'help';
@@ -260,7 +262,8 @@ document.getElementById('offersView')
 
 document.getElementById('ibericaView')
   .classList.toggle('active-view', view === 'iberica');
-
+document.getElementById('sigmaView')
+  .classList.toggle('active-view', view === 'sigma');
 document.getElementById('helpView')
   .classList.toggle('active-view', view === 'help');
   document.getElementById('vpnView')
