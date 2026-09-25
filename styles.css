@@ -364,14 +364,22 @@
   #offersView .offer-card {
     padding: 4px !important;
 }
-#offersView .price-row {
-    padding: 4px 8px !important;
-    font-size: 11px !important;
+
+    
+}#offersView .price-row {
+    padding: 2px 8px !important;
+    font-size: 10px !important;
+    min-height: 0 !important;
 }
    #offersView .offer-card h3 {
-    font-size: 13px !important;
-    padding: 4px 8px !important;
-    margin: 0 !important;
+  #offersView .offer-name {
+    padding: 3px 8px !important;
+    min-height: 0 !important;
+    line-height: 1 !important;
+      
+}#offersView .offers-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+}
 } 
 }
 
