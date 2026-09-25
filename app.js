@@ -379,6 +379,43 @@ if (
 
   return;
 }
+  // SIGMA PRO: bajar desde la pestaña al botón de WhatsApp
+if (activeView === 'sigma' && e.key === 'ArrowDown') {
+  const botonWhatsappSigma = document.querySelector('#sigmaView .product-whatsapp');
+
+  if (botonWhatsappSigma) {
+    e.preventDefault();
+    botonWhatsappSigma.focus({ preventScroll: true });
+    botonWhatsappSigma.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center'
+    });
+  }
+
+  return;
+}
+  // SIGMA PRO: subir desde el botón de WhatsApp a la pestaña
+if (
+  activeView === 'sigma' &&
+  el.classList.contains('product-whatsapp') &&
+  e.key === 'ArrowUp'
+) {
+  e.preventDefault();
+
+  const pestanaSigma = tabs.find(
+    tab => tab.dataset.view === 'sigma'
+  );
+
+  if (pestanaSigma) {
+    pestanaSigma.focus({ preventScroll: true });
+    pestanaSigma.scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest'
+    });
+  }
+
+  return;
+}
   // Desplazamiento con mando en secciones que no son APPS
   if(activeView !== 'apps' && (e.key === 'ArrowDown' || e.key === 'ArrowUp')){
     e.preventDefault();
