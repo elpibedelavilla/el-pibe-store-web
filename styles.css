@@ -384,21 +384,24 @@
 }
 /* ===== FICHA DE PRODUCTO IBÉRICA ===== */
 
-#ibericaView .product-detail {
+#ibericaView .product-detail,
+#sigmaView .product-detail {
   position: relative;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-#ibericaView .product-detail-image {
+#ibericaView .product-detail-image,
+#sigmaView .product-detail-image {
   display: block;
   width: 100%;
   height: auto;
   border-radius: 12px;
 }
 
-#ibericaView .product-whatsapp {
+#ibericaView .product-whatsapp,
+#sigmaView .product-whatsapp {
   position: absolute;
   left: 5%;
   bottom: 6%;
@@ -418,11 +421,12 @@
 }
 
 #ibericaView .product-whatsapp:focus,
-#ibericaView .product-whatsapp:hover {
-  transform: scale(1.12);
-  border-color: #ffffff;
-  box-shadow: 0 0 0 5px #25D366, 0 0 24px rgba(255,255,255,0.9);
-}
+#ibericaView .product-whatsapp:hover,
+#sigmaView .product-whatsapp:focus,
+#sigmaView .product-whatsapp:hover {
+    transform: scale(1.12);
+    border-color: #ffffff;
+    box-shadow: 0 0 0 5px #25D366, 0 0 24px rgba(255,255,255,0.9);
 
 /* ===== VENTANA QR WHATSAPP IBÉRICA ===== */
 
