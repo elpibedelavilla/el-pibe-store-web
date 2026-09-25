@@ -383,10 +383,12 @@ if (
 if (activeView === 'sigma' && e.key === 'ArrowDown') {
   const botonWhatsappSigma = document.querySelector('#sigmaView .product-whatsapp');
 
-  if (botonWhatsappSigma) {
-    e.preventDefault();
- botonWhatsappSigma.focus();
-  }
+ if (botonWhatsappSigma) {
+  e.preventDefault();
+  e.stopImmediatePropagation();
+  botonWhatsappSigma.focus({ preventScroll: true });
+  return;
+}
 
   return;
 }
