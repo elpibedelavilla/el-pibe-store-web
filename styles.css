@@ -492,5 +492,18 @@
   border-color: #ffffff;
   outline: none;
   box-shadow: 0 0 5px #25d366, 0 0 24px rgba(255,255,255,0.9);
+}/* AJUSTE IMAGEN SIGMA PRO */
+#sigmaView .product-detail {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#sigmaView .product-detail-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 12px;
 }
 
