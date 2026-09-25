@@ -277,6 +277,13 @@ document.getElementById('helpView')
     setTimeout(() => focusApp(currentApp), 0);
   else if(focusContent)
     setTimeout(() => tabs[1].focus(), 0);
+  if (view === 'iberica' || view === 'sigma') {
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'auto'
+    });
+}
 }
 
 tabs.forEach(tab => {
