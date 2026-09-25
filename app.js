@@ -331,7 +331,44 @@ document.addEventListener('keydown', e => {
     return;
        
   }
+// IBÉRICA: bajar desde la pestaña al botón de WhatsApp
+if (activeView === 'iberica' && e.key === 'ArrowDown') {
+  const botonWhatsapp = document.querySelector('#ibericaView .product-whatsapp');
 
+  if (botonWhatsapp) {
+    e.preventDefault();
+    botonWhatsapp.focus({ preventScroll: true });
+    botonWhatsapp.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center'
+    });
+  }
+
+  return;
+}
+
+// IBÉRICA: subir desde el botón de WhatsApp a la pestaña
+if (
+  activeView === 'iberica' &&
+  el.classList.contains('product-whatsapp') &&
+  e.key === 'ArrowUp'
+) {
+  e.preventDefault();
+
+  const pestañaIberica = tabs.find(
+    tab => tab.dataset.view === 'iberica'
+  );
+
+  if (pestañaIberica) {
+    pestañaIberica.focus({ preventScroll: true });
+    pestañaIberica.scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest'
+    });
+  }
+
+  return;
+}
   // Desplazamiento con mando en secciones que no son APPS
   if(activeView !== 'apps' && (e.key === 'ArrowDown' || e.key === 'ArrowUp')){
     e.preventDefault();
