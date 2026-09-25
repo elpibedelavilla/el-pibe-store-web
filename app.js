@@ -385,11 +385,7 @@ if (activeView === 'sigma' && e.key === 'ArrowDown') {
 
   if (botonWhatsappSigma) {
     e.preventDefault();
-    botonWhatsappSigma.focus({ preventScroll: true });
-    botonWhatsappSigma.scrollIntoView({
-      behavior: 'smooth',
-      block: 'center'
-    });
+ botonWhatsappSigma.focus();
   }
 
   return;
