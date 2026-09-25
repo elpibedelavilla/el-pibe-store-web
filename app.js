@@ -428,3 +428,42 @@ window.addEventListener('load', () => {
     barra.scrollLeft = 0;
   }
 });
+
+// ===== QR WHATSAPP IBÉRICA =====
+
+const ibericaWhatsapp = document.getElementById('ibericaWhatsapp');
+const ibericaQrModal = document.getElementById('ibericaQrModal');
+const cerrarIbericaQr = document.getElementById('cerrarIbericaQr');
+const ibericaQr = document.getElementById('ibericaQr');
+
+const ibericaNumero = '34695768168';
+const ibericaMensaje = 'Hola, me interesa el servicio IBERICA';
+const ibericaWhatsappUrl =
+  `https://wa.me/${ibericaNumero}?text=${encodeURIComponent(ibericaMensaje)}`;
+
+function abrirIbericaQr() {
+  ibericaQr.innerHTML = '';
+
+  new QRCode(ibericaQr, {
+    text: ibericaWhatsappUrl,
+    width: 240,
+    height: 240
+  });
+
+  ibericaQrModal.hidden = false;
+
+  setTimeout(() => {
+    cerrarIbericaQr.focus({ preventScroll: true });
+  }, 0);
+}
+
+function cerrarVentanaIbericaQr() {
+  ibericaQrModal.hidden = true;
+
+  setTimeout(() => {
+    ibericaWhatsapp.focus({ preventScroll: true });
+  }, 0);
+}
+
+ibericaWhatsapp.addEventListener('click', abrirIbericaQr);
+cerrarIbericaQr.addEventListener('click', cerrarVentanaIbericaQr);
