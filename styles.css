@@ -507,3 +507,29 @@
     border-radius: 12px;
 }
 
+/* BOTÓN SIGMA PRO */
+#sigmaView .product-whatsapp {
+    display: flex;
+    position: relative;
+    margin: 20px auto 30px auto;
+    width: 70%;
+    padding: 14px 24px;
+    justify-content: center;
+    align-items: center;
+    background: #25d366;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 800;
+    text-decoration: none;
+    border: 4px solid transparent;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+}
+
+#sigmaView .product-whatsapp:focus,
+#sigmaView .product-whatsapp:hover {
+    transform: scale(1.03);
+    border-color: #ffffff;
+}
+
