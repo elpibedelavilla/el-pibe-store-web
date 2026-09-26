@@ -20,7 +20,7 @@ const apps = [
 const packages = [
   {name:'P2P', prices:{3:25, 6:40, 12:70}},
   {name:'IBERICA', prices:{3:30, 6:50, 12:80}},
-  {name:'TREX', prices:{3:25, 6:40, 12:70}},
+  {name:'TREX/8K IPTV', prices:{3:25, 6:40, 12:70}},
   {name:'CRYSTAL', prices:{3:25, 6:40, 12:60}}
 ];
 
