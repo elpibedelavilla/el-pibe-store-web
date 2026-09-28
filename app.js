@@ -250,6 +250,7 @@ function showView(view, focusContent=false){
 document.getElementById('appsView').hidden = view !== 'apps';
   document.getElementById('ibericaView').hidden = view !== 'iberica';
   document.getElementById('sigmaView').hidden = view !== 'sigma';
+  document.getElementById('trexView').hidden = view !== 'trex';
  
 document.getElementById('offersView').hidden = view !== 'offers';
 
@@ -267,7 +268,8 @@ document.getElementById('ibericaView')
   .classList.toggle('active-view', view === 'iberica');
 document.getElementById('sigmaView')
   .classList.toggle('active-view', view === 'sigma');
-document.getElementById('helpView')
+document.getElementById('trexView')
+  .classList.toggle('active-view', view === 'trex');
   .classList.toggle('active-view', view === 'help');
   document.getElementById('vpnView')
   .classList.toggle('active-view', view === 'vpn');
@@ -280,7 +282,7 @@ document.getElementById('helpView')
     setTimeout(() => focusApp(currentApp), 0);
   else if(focusContent)
     setTimeout(() => tabs[1].focus(), 0);
-  if (view === 'iberica' || view === 'sigma') {
+  if (view === 'iberica' || view === 'sigma' || view === 'trex') {
     window.scrollTo({
         top: 0,
         left: 0,
@@ -557,3 +559,43 @@ function cerrarVentanaSigmaQr() {
 
 sigmaWhatsapp.addEventListener('click', abrirSigmaQr);
 cerrarSigmaQr.addEventListener('click', cerrarVentanaSigmaQr);
+// ===== QR WHATSAPP 8K IPTV =====
+
+const trexWhatsapp = document.getElementById('trexWhatsapp');
+const trexQrModal = document.getElementById('trexQrModal');
+const cerrarTrexQr = document.getElementById('cerrarTrexQr');
+const trexQr = document.getElementById('trexQr');
+
+const trexNumero = '34695768168';
+const trexMensaje = 'Hola, me interesa el servicio 8K IPTV';
+const trexWhatsappUrl =
+  `https://wa.me/${trexNumero}?text=${encodeURIComponent(trexMensaje)}`;
+
+function abrirTrexQr() {
+  ibericaQrModal.hidden = true;
+  sigmaQrModal.hidden = true;
+  trexQr.innerHTML = '';
+
+  new QRCode(trexQr, {
+    text: trexWhatsappUrl,
+    width: 240,
+    height: 240
+  });
+
+  trexQrModal.hidden = false;
+
+  setTimeout(() => {
+    cerrarTrexQr.focus({ preventScroll: true });
+  }, 0);
+}
+
+function cerrarVentanaTrexQr() {
+  trexQrModal.hidden = true;
+
+  setTimeout(() => {
+    trexWhatsapp.focus({ preventScroll: true });
+  }, 0);
+}
+
+trexWhatsapp.addEventListener('click', abrirTrexQr);
+cerrarTrexQr.addEventListener('click', cerrarVentanaTrexQr);
