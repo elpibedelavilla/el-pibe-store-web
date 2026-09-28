@@ -534,6 +534,20 @@ const sigmaWhatsappUrl =
 function abrirSigmaQr() {
   ibericaQrModal.hidden = true;
   document.body.appendChild(sigmaQrModal);
+  sigmaQrModal.style.cssText = `
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 99999 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: rgba(0, 0, 0, 0.82) !important;
+`;
   sigmaQr.innerHTML = '';
 
   new QRCode(sigmaQr, {
