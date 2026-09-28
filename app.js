@@ -533,7 +533,7 @@ const sigmaWhatsappUrl =
 
 function abrirSigmaQr() {
   ibericaQrModal.hidden = true;
-  document.body.appendChild(sigmaQrModal);
+
   sigmaQrModal.style.cssText = `
   position: fixed !important;
   top: 0 !important;
