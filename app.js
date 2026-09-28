@@ -533,6 +533,7 @@ const sigmaWhatsappUrl =
 
 function abrirSigmaQr() {
   ibericaQrModal.hidden = true;
+  document.body.appendChild(sigmaQrModal);
   sigmaQr.innerHTML = '';
 
   new QRCode(sigmaQr, {
