@@ -548,6 +548,16 @@ function abrirSigmaQr() {
   justify-content: center !important;
   background: rgba(0, 0, 0, 0.82) !important;
 `;
+  sigmaQrModal.querySelector('.qr-box').style.cssText = `
+  width: min(90%, 520px);
+  padding: 28px;
+  background: #082b4d;
+  border: 3px solid #00eaff;
+  border-radius: 18px;
+  text-align: center;
+  color: #ffffff;
+  box-shadow: 0 0 30px rgba(0, 234, 255, 0.45);
+`;
   sigmaQr.innerHTML = '';
 
   new QRCode(sigmaQr, {
