@@ -575,8 +575,7 @@ function abrirSigmaQr() {
 
 function cerrarVentanaSigmaQr() {
   sigmaQrModal.hidden = true;
-  sigmaQrModal.style.display = 'none';
- 
+  sigmaQrModal.style.setProperty('display', 'none', 'important');
 
   setTimeout(() => {
     sigmaWhatsapp.focus({ preventScroll: true });
