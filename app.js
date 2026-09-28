@@ -12,7 +12,7 @@ const apps = [
   {name:'Surfshark', slug:'surfshark', image:'surfshark.jpg', pin:'769314'},
   {name:'V8', slug:'v8', image:'v8.png', pin:'135947'},
   {name:'VU Player', slug:'vuplayer', image:'vuplayer.png', pin:'684253'},
-  {name:'Dino', slug:'dino', image:'dino.png', pin:'327581'}
+  {name:'Dino', slug:'dino', image:'dino.png', pin:'327581'},
   {name:'8K', slug:'8kplayer', image:'8k.png', pin:'824618'}
  
 
