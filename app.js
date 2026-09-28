@@ -575,6 +575,7 @@ function abrirSigmaQr() {
 
 function cerrarVentanaSigmaQr() {
   sigmaQrModal.hidden = true;
+  sigmaQrModal.style.display = 'none';
  
 
   setTimeout(() => {
