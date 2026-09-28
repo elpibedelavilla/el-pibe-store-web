@@ -450,7 +450,7 @@
 /* ===== VENTANA QR WHATSAPP IBÉRICA ===== */
 
 #ibericaQrModal,
-#sigmaQrModal  {
+#sigmaQrModal,
  #trexQrModal {
   position: fixed;
   inset: 0;
