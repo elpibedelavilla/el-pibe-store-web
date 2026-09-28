@@ -433,6 +433,19 @@
     border-color: #ffffff;
     box-shadow: 0 0 0 5px #25D366, 0 0 24px rgba(255,255,255,0.9);
     }
+    #ibericaWhatsapp,
+#sigmaWhatsapp,
+#trexWhatsapp {
+    position: absolute !important;
+    left: 5% !important;
+    bottom: 6% !important;
+    background: #25D366 !important;
+    color: #ffffff !important;
+    padding: 14px 24px !important;
+    font-size: 18px !important;
+    font-weight: 800 !important;
+    border-radius: 10px !important;
+}
 
 /* ===== VENTANA QR WHATSAPP IBÉRICA ===== */
 
