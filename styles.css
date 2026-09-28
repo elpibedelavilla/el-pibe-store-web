@@ -366,21 +366,21 @@
 }
 
     
-}#offersView .price-row {
+#offersView .price-row {
     padding: 2px 8px !important;
     font-size: 10px !important;
     min-height: 0 !important;
 }
-   #offersView .offer-card h3 {
-  #offersView .offer-name {
+
+#offersView .offer-card h3,
+#offersView .offer-name {
     padding: 3px 8px !important;
     min-height: 0 !important;
     line-height: 1 !important;
-      
-}#offersView .offers-grid {
-    grid-template-columns: repeat(4, 1fr) !important;
 }
-} 
+
+#offersView .offers-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
 }
 /* ===== FICHA DE PRODUCTO IBÉRICA ===== */
 
