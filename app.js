@@ -269,7 +269,7 @@ document.getElementById('ibericaView')
 document.getElementById('sigmaView')
   .classList.toggle('active-view', view === 'sigma');
 document.getElementById('trexView')
-  classList.toggle('active-view', view === 'trex');
+  .classList.toggle('active-view', view === 'trex');
  
   document.getElementById('vpnView')
   .classList.toggle('active-view', view === 'vpn');
