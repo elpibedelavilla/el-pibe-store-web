@@ -519,7 +519,7 @@
   position: relative !important;
 }
 
-#sigmaView #sigmaWhatsapp {
+#sigmaWhatsapp {
   position: absolute !important;
   left: 5% !important;
   bottom: 6% !important;
@@ -540,8 +540,8 @@
   cursor: pointer !important;
 }
 
-#sigmaView #sigmaWhatsapp:hover,
-#sigmaView #sigmaWhatsapp:focus {
+#sigmaWhatsapp:hover,
+#sigmaWhatsapp:focus {
   transform: scale(1.12);
   border-color: #ffffff !important;
   box-shadow: 0 0 5px #25D366, 0 0 24px rgba(255,255,255,0.9);
