@@ -574,7 +574,7 @@ function abrirSigmaQr() {
 }
 
 function cerrarVentanaSigmaQr() {
-  alert('CIERRE SIGMA');
+  
   sigmaQrModal.hidden = true;
   sigmaQrModal.style.setProperty('display', 'none', 'important');
 
