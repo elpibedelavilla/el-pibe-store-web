@@ -381,7 +381,7 @@
 
 #offersView .offers-grid {
     grid-template-columns: repeat(4, 1fr) !important;
-}
+
 /* ===== FICHA DE PRODUCTO IBÉRICA ===== */
 
 #ibericaView .product-detail,
