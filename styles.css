@@ -402,6 +402,26 @@
   border-radius: 12px;
 }
 
+    /* ===== AJUSTE FICHAS PNG EN ANDROID / TV ===== */
+@media (orientation: landscape) and (max-height: 700px) {
+    #ibericaView .product-detail,
+    #sigmaView .product-detail,
+    #trexView .product-detail {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+    }
+
+    #ibericaView .product-detail-image,
+    #sigmaView .product-detail-image,
+    #trexView .product-detail-image {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+    }
+}
+
 
  
 
