@@ -494,6 +494,20 @@ const ibericaWhatsappUrl =
 function abrirIbericaQr() {
   sigmaQrModal.hidden = true;
   document.body.appendChild(ibericaQrModal);
+  ibericaQrModal.style.cssText = `
+  position: fixed !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 99999 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.82);
+`;
   ibericaQr.innerHTML = '';
 
   new QRCode(ibericaQr, {
