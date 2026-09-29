@@ -8,7 +8,7 @@ const apps = [
   {name:'IPVanish', slug:'ipvanish', image:'ipvanish.png', pin:'852641'},
   {name:'Media VOD', slug:'mediavod', image:'mediavod.png', pin:'296738'},
   {name:'Neweden', slug:'newe1', image:'newe1.png', pin:'573809'},
-  {name:'El Pibe Stream', slug:'elpibestream', image:'elpibestream.jpg', pin:'418625'},
+  {name:'El Pibe Stream', slug:'elpibestream', image:'elpibestream.png', pin:'418625'},
   {name:'Surfshark', slug:'surfshark', image:'surfshark.jpg', pin:'769314'},
   {name:'V8', slug:'v8', image:'v8.png', pin:'135947'},
   {name:'VU Player', slug:'vuplayer', image:'vuplayer.png', pin:'684253'},
