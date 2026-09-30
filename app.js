@@ -148,7 +148,15 @@ function pedirPin(app) {
     }
   }
 
-  numberKeys.forEach(btn => {
+ numberKeys.forEach(btn => {
+    btn.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.keyCode === 13 || e.keyCode === 23) {
+            e.preventDefault();
+            e.stopPropagation();
+            agregarNumero(btn.dataset.number);
+        }
+    });
+});
     btn.addEventListener('click', () => agregarNumero(btn.dataset.number));
   });
 
