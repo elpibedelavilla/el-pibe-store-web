@@ -148,7 +148,7 @@ function pedirPin(app) {
     }
   }
 
- numberKeys.forEach(btn => {
+  numberKeys.forEach(btn => {
     btn.addEventListener('click', () => agregarNumero(btn.dataset.number));
   });
 
@@ -407,7 +407,6 @@ window.addEventListener('load', () => {
     barra.scrollLeft = 0;
   }
 });
-
 
 
 
