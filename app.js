@@ -99,7 +99,7 @@ function pedirPin(app) {
       document.removeEventListener('keydown', tecladoFisico, true);
 
       setTimeout(() => {
-        window.location.href = `https://dl.epdlv72.com/${app.slug}`;
+       window.location.href = app.slug === 'vlc' ? 'https://github.com/elpibedelavilla/el-pibe-store/releases/download/vlc-v2/vlc-3-7-1.apk' : `https://dl.epdlv72.com/${app.slug}`;
       }, 350);
     } else {
       message.textContent = 'Código incorrecto';
