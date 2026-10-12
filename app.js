@@ -15,7 +15,7 @@ const apps = [
   {name:'Dino', slug:'dino', image:'dino.png', pin:'327581'},
   {name:'8K', slug:'8kplayer', image:'8k.png', pin:'824618'},
  {name:'VLC', slug:'vlc', image:'vlc.jpg', pin:'246810'},
-
+{name:'TUNNEL', slug:'tunnel', image:'tunnel.png', pin:'639284'},
 ];
 
 // Para cambiar precios en el futuro, edita solamente estos valores.
