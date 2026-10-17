@@ -99,7 +99,7 @@ function pedirPin(app) {
       document.removeEventListener('keydown', tecladoFisico, true);
 
       setTimeout(() => {
-window.location.href = app.slug === 'vlc' ? 'https://github.com/elpibedelavilla/el-pibe-store/releases/download/vlc-v2/vlc-3-7-1.apk' : app.slug === 'tunnel' ? 'https://github.com/elpibedelavilla/el-pibe-store-web/releases/download/tunnel/TunnelBear-4.1.9.apk' : app.slug === 'iberovu' ? 'https://github.com/elpibedelavilla/el-pibe-store-web/releases/download/iberovu/iberovu.apk' : `https://dl.epdlv72.com/${app.slug}`;
+window.location.href = app.slug === 'vlc' ? 'https://github.com/elpibedelavilla/el-pibe-store/releases/download/vlc-v2/vlc-3-7-1.apk' : app.slug === 'tunnel' ? 'https://github.com/elpibedelavilla/el-pibe-store-web/releases/download/tunnel/TunnelBear-4.1.9.apk' : app.slug === 'iberovu' ? 'https://github.com/elpibedelavilla/el-pibe-store-web/releases/download/iberovu/iberovu.apk' : app.slug === 'iboiberica' ? 'https://github.com/elpibedelavilla/el-pibe-store-web/releases/download/iboiberica/ibo.3.9.apk' : `https://dl.epdlv72.com/${app.slug}`;
       }, 350);
     } else {
       message.textContent = 'Código incorrecto';
