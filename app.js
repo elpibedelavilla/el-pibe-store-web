@@ -1,21 +1,22 @@
 const apps = [
-  {name:'EDTVOD', slug:'edtvod', image:'edtvod.png', pin:'583214'},
-  {name:'ES-P2P', slug:'esp2p', image:'esp2p.png', pin:'741926'},
-  {name:'Fénix', slug:'fenix', image:'fenix.png', pin:'368517'},
-  {name:'Ibero VU', slug:'iberovu', image:'iberovu.png', pin:'925403'},
-  {name:'IBO Ibérica', slug:'iboiberica', image:'iboiberica.png', pin:'614872'},
-  {name:'iBOX', slug:'ibox', image:'ibox.png', pin:'437195'},
-  {name:'IPVanish', slug:'ipvanish', image:'ipvanish.png', pin:'852641'},
-  {name:'Media VOD', slug:'mediavod', image:'mediavod.png', pin:'296738'},
-  {name:'Neweden', slug:'newe1', image:'newe1.png', pin:'573809'},
-  {name:'El Pibestream', slug:'elpibestream', image:'elpibestream.png', pin:'418625'},
-  {name:'Surfshark', slug:'surfshark', image:'surfshark.jpg', pin:'769314'},
-  {name:'V8', slug:'v8', image:'v8.png', pin:'135947'},
-  {name:'VU Player', slug:'vuplayer', image:'vuplayer.png', pin:'684253'},
-  {name:'Dino', slug:'dino', image:'dino.png', pin:'327581'},
-  {name:'8K', slug:'8kplayer', image:'8k.png', pin:'824618'},
- {name:'VLC', slug:'vlc', image:'vlc.jpg', pin:'246810'},
-{name:'TUNNEL', slug:'tunnel', image:'tunnel.png', pin:'639284'},
+  {name:'EDTVOD', slug:'edtvod', image:'edtvod.png', pin:'442244'},
+  {name:'ES-P2P', slug:'esp2p', image:'esp2p.png', pin:'442244'},
+  {name:'Fénix', slug:'fenix', image:'fenix.png', pin:'442244'},
+  {name:'Ibero VU', slug:'iberovu', image:'iberovu.png', pin:'442244'},
+  {name:'IBO Ibérica', slug:'iboiberica', image:'iboiberica.png', pin:'442244'},
+  {name:'iBOX', slug:'ibox', image:'ibox.png', pin:'442244'},
+  {name:'IPVanish', slug:'ipvanish', image:'ipvanish.png', pin:'442244'},
+  {name:'Media VOD', slug:'mediavod', image:'mediavod.png', pin:'442244'},
+  {name:'Neweden', slug:'newe1', image:'newe1.png', pin:'442244'},
+  {name:'El Pibestream', slug:'elpibestream', image:'elpibestream.png', pin:'442244'},
+  {name:'Surfshark', slug:'surfshark', image:'surfshark.jpg', pin:'442244'},
+  {name:'V8', slug:'v8', image:'v8.png', pin:'442244'},
+  {name:'VU Player', slug:'vuplayer', image:'vuplayer.png', pin:'442244'},
+  {name:'Dino', slug:'dino', image:'dino.png', pin:'442244'},
+  {name:'8K', slug:'8kplayer', image:'8k.png', pin:'442244'},
+ {name:'VLC', slug:'vlc', image:'vlc.jpg', pin:'442244'},
+{name:'TUNNEL', slug:'tunnel', image:'tunnel.png', pin:'442244'},
+ {name:'IBE V156', slug:'ibe156', image:'ibe156.png', pin:'442244'},
 ];
 
 // Para cambiar precios en el futuro, edita solamente estos valores.
@@ -99,7 +100,7 @@ function pedirPin(app) {
       document.removeEventListener('keydown', tecladoFisico, true);
 
       setTimeout(() => {
-window.location.href = app.slug === 'vlc' ? 'https://github.com/elpibedelavilla/el-pibe-store/releases/download/vlc-v2/vlc-3-7-1.apk' : app.slug === 'tunnel' ? 'https://github.com/elpibedelavilla/el-pibe-store-web/releases/download/tunnel/TunnelBear-4.1.9.apk' : app.slug === 'iberovu' ? 'https://github.com/elpibedelavilla/el-pibe-store-web/releases/download/iberovu/iberovu.apk' : app.slug === 'iboiberica' ? 'https://github.com/elpibedelavilla/el-pibe-store-web/releases/download/iboiberica/ibo.3.9.apk' : `https://dl.epdlv72.com/${app.slug}`;
+window.location.href = app.slug === 'vlc' ? 'https://github.com/elpibedelavilla/el-pibe-store/releases/download/vlc-v2/vlc-3-7-1.apk' : app.slug === 'tunnel' ? 'https://github.com/elpibedelavilla/el-pibe-store-web/releases/download/tunnel/TunnelBear-4.1.9.apk' : app.slug === 'iberovu' ? 'https://github.com/elpibedelavilla/el-pibe-store-web/releases/download/iberovu/iberovu.apk' : app.slug === 'iboiberica' ? 'https://github.com/elpibedelavilla/el-pibe-store-web/releases/download/iboiberica/ibo.3.9.apk': app.slug === 'ibe156' ? 'https://github.com/elpibedelavilla/el-pibe-store-web/releases/download/v1.5.6/IBERICA_v1.6.5.apk' : `https://dl.epdlv72.com/${app.slug}`;
       }, 350);
     } else {
       message.textContent = 'Código incorrecto';
