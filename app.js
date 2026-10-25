@@ -17,6 +17,7 @@ const apps = [
  {name:'VLC', slug:'vlc', image:'vlc.jpg', pin:'442244'},
 {name:'TUNNEL', slug:'tunnel', image:'tunnel.png', pin:'442244'},
  {name:'IBE V156', slug:'ibe156', image:'ibe156.png', pin:'442244'},
+  {name:'EL PIBE DE LA VILLA', slug:'delavilla', image:'delavilla.png', pin:'442244'},
 ];
 
 // Para cambiar precios en el futuro, edita solamente estos valores.
@@ -100,7 +101,7 @@ function pedirPin(app) {
       document.removeEventListener('keydown', tecladoFisico, true);
 
       setTimeout(() => {
-window.location.href = app.slug === 'vlc' ? 'https://github.com/elpibedelavilla/el-pibe-store/releases/download/vlc-v2/vlc-3-7-1.apk' : app.slug === 'tunnel' ? 'https://github.com/elpibedelavilla/el-pibe-store-web/releases/download/tunnel/TunnelBear-4.1.9.apk' : app.slug === 'iberovu' ? 'https://github.com/elpibedelavilla/el-pibe-store-web/releases/download/iberovu/iberovu.apk' : app.slug === 'iboiberica' ? 'https://github.com/elpibedelavilla/el-pibe-store-web/releases/download/iboiberica/ibo.3.9.apk': app.slug === 'ibe156' ? 'https://github.com/elpibedelavilla/el-pibe-store-web/releases/download/v1.5.6/IBERICA_v1.6.5.apk' : `https://dl.epdlv72.com/${app.slug}`;
+window.location.href = app.slug === 'vlc' ? 'https://github.com/elpibedelavilla/el-pibe-store/releases/download/vlc-v2/vlc-3-7-1.apk' : app.slug === 'tunnel' ? 'https://github.com/elpibedelavilla/el-pibe-store-web/releases/download/tunnel/TunnelBear-4.1.9.apk' : app.slug === 'iberovu' ? 'https://github.com/elpibedelavilla/el-pibe-store-web/releases/download/iberovu/iberovu.apk' : app.slug === 'iboiberica' ? 'https://github.com/elpibedelavilla/el-pibe-store-web/releases/download/iboiberica/ibo.3.9.apk': app.slug === 'delavilla' ? 'https://github.com/elpibedelavilla/el-pibe-store/releases/download/delavilla/delavilla.apk' : app.slug === 'ibe156' ? 'https://github.com/elpibedelavilla/el-pibe-store-web/releases/download/v1.5.6/IBERICA_v1.6.5.apk' : `https://dl.epdlv72.com/${app.slug}`;
       }, 350);
     } else {
       message.textContent = 'Código incorrecto';
